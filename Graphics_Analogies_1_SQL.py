@@ -19,7 +19,7 @@ japan_word VARCHAR(20),
 japan_value FLOAT(20)
 '''
 
-route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite/Analogies_test.db'
+route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite/Analogies.db'
 conexion = sqlite3.connect(route2)
 # create the cursor pointing to the data base
 cursor = conexion.cursor()
@@ -35,6 +35,7 @@ def graph_femenine_1(rug = False):
 	else: 
 		sns.distplot(datos)
 	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add femenine for a total of ' + str(cantidad) + ' samples.png')
 	plt.show()
 
 def graph_masculine_1(rug = False):
@@ -48,6 +49,7 @@ def graph_masculine_1(rug = False):
 	else: 
 		sns.distplot(datos)
 	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add masculine for a total of ' + str(cantidad) + ' samples.png')
 	plt.show()
 
 def graph_tokio_1(rug = False):
@@ -61,6 +63,7 @@ def graph_tokio_1(rug = False):
 	else: 
 		sns.distplot(datos)
 	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add tokio for a total of ' + str(cantidad) + ' samples.png')
 	plt.show()
 
 def graph_japan_1(rug = False):
@@ -74,18 +77,13 @@ def graph_japan_1(rug = False):
 	else: 
 		sns.distplot(datos)
 	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add japan for a total of ' + str(cantidad) + ' samples.png')
 	plt.show()
 
 graph_femenine_1()
 graph_masculine_1()
 graph_tokio_1()
 graph_japan_1()
-
-
-
-
-
-
 
 # close the conexion with the data base
 conexion.close()
