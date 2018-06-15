@@ -1,6 +1,7 @@
 import sqlite3
-import seaborn as sb 
+import seaborn as sns 
 import matplotlib.pyplot as plt
+import numpy as np
 
 '''
 word VARCHAR(20) PRIMARY KEY,
@@ -18,15 +19,70 @@ japan_word VARCHAR(20),
 japan_value FLOAT(20)
 '''
 
-# create the data base
 route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite/Analogies_test.db'
 conexion = sqlite3.connect(route2)
 # create the cursor pointing to the data base
 cursor = conexion.cursor()
 
+def graph_femenine_1(rug = False):
+	cursor.execute("SELECT femenine_value FROM Analogies_1")
+	femeninos = cursor.fetchall()
+	cantidad = len(femeninos)
+	plt.figure(figsize = (20, 7))
+	plt.title('Add femenine for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(femeninos, rug = True)
+	else: 
+		sns.distplot(femeninos)
+	plt.xlabel('Mean : ' + str(np.mean(femeninos)) + ' - STD : ' + str(np.std(femeninos)))
+	plt.show()
 
-cursor.execute("SELECT masculine_value FROM Analogies_1")
+def graph_masculine_1(rug = False):
+	cursor.execute("SELECT masculine_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+	plt.figure(figsize = (20, 7))
+	plt.title('Add masculine for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(datos, rug = True)
+	else: 
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.show()
 
-masculinos = cursor.fetchall()
+def graph_femenine_1(rug = False):
+	cursor.execute("SELECT femenine_value FROM Analogies_1")
+	femeninos = cursor.fetchall()
+	cantidad = len(femeninos)
+	plt.figure(figsize = (20, 7))
+	plt.title('Add femenine for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(femeninos, rug = True)
+	else: 
+		sns.distplot(femeninos)
+	plt.xlabel('Mean : ' + str(np.mean(femeninos)) + ' - STD : ' + str(np.std(femeninos)))
+	plt.show()
 
-print(type(masculinos[0:10][0][0]))
+def graph_femenine_1(rug = False):
+	cursor.execute("SELECT femenine_value FROM Analogies_1")
+	femeninos = cursor.fetchall()
+	cantidad = len(femeninos)
+	plt.figure(figsize = (20, 7))
+	plt.title('Add femenine for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(femeninos, rug = True)
+	else: 
+		sns.distplot(femeninos)
+	plt.xlabel('Mean : ' + str(np.mean(femeninos)) + ' - STD : ' + str(np.std(femeninos)))
+	plt.show()
+
+graph_femenine_1()
+
+
+
+
+
+
+
+# close the conexion with the data base
+conexion.close()
