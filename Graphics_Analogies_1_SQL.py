@@ -26,15 +26,15 @@ cursor = conexion.cursor()
 
 def graph_femenine_1(rug = False):
 	cursor.execute("SELECT femenine_value FROM Analogies_1")
-	femeninos = cursor.fetchall()
-	cantidad = len(femeninos)
+	datos = cursor.fetchall()
+	cantidad = len(datos)
 	plt.figure(figsize = (20, 7))
 	plt.title('Add femenine for a total of ' + str(cantidad) + ' samples.')
 	if rug:
-		sns.distplot(femeninos, rug = True)
+		sns.distplot(datos, rug = True)
 	else: 
-		sns.distplot(femeninos)
-	plt.xlabel('Mean : ' + str(np.mean(femeninos)) + ' - STD : ' + str(np.std(femeninos)))
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
 	plt.show()
 
 def graph_masculine_1(rug = False):
@@ -50,33 +50,36 @@ def graph_masculine_1(rug = False):
 	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
 	plt.show()
 
-def graph_femenine_1(rug = False):
-	cursor.execute("SELECT femenine_value FROM Analogies_1")
-	femeninos = cursor.fetchall()
-	cantidad = len(femeninos)
+def graph_tokio_1(rug = False):
+	cursor.execute("SELECT tokio_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
 	plt.figure(figsize = (20, 7))
 	plt.title('Add femenine for a total of ' + str(cantidad) + ' samples.')
 	if rug:
-		sns.distplot(femeninos, rug = True)
+		sns.distplot(datos, rug = True)
 	else: 
-		sns.distplot(femeninos)
-	plt.xlabel('Mean : ' + str(np.mean(femeninos)) + ' - STD : ' + str(np.std(femeninos)))
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
 	plt.show()
 
-def graph_femenine_1(rug = False):
-	cursor.execute("SELECT femenine_value FROM Analogies_1")
-	femeninos = cursor.fetchall()
-	cantidad = len(femeninos)
+def graph_japan_1(rug = False):
+	cursor.execute("SELECT japan_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
 	plt.figure(figsize = (20, 7))
 	plt.title('Add femenine for a total of ' + str(cantidad) + ' samples.')
 	if rug:
-		sns.distplot(femeninos, rug = True)
+		sns.distplot(datos, rug = True)
 	else: 
-		sns.distplot(femeninos)
-	plt.xlabel('Mean : ' + str(np.mean(femeninos)) + ' - STD : ' + str(np.std(femeninos)))
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
 	plt.show()
 
 graph_femenine_1()
+graph_masculine_1()
+graph_tokio_1()
+graph_japan_1()
 
 
 
