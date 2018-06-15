@@ -4,6 +4,22 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+'''
+word VARCHAR(20) PRIMARY KEY,
+
+femenine_word VARCHAR(20),
+femenine_value FLOAT(20), 
+
+masculine_word VARCHAR(20),
+masculine_value FLOAT(20),
+
+tokio_word VARCHAR(20),
+tokio_value FLOAT(20),
+
+japan_word VARCHAR(20),
+japan_value FLOAT(20)
+'''
+
 ## FUNCTIONS:
 ## ==========
 
@@ -24,7 +40,7 @@ def add_masculine(word, Tope = 1):
 def add_Tokio(word, Tope = 1):
 	'''
 	'''
-	return model.most_similar(positive = ['tokio', word], negative = ['Japan'], topn = Tope)
+	return model.most_similar(positive = ['Tokio', word], negative = ['Japan'], topn = Tope)
 
 def add_Japan(word, Tope = 1):
 	'''
@@ -40,29 +56,20 @@ route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite
 conexion = sqlite3.connect(route2)
 # create the cursor pointing to the data base
 cursor = conexion.cursor()
-# crete one table for this scipt
-cursor.execute('''
-	CREATE TABLE Analogies_1 (
-			word VARCHAR(20) PRIMARY KEY,
-			femenine_word VARCHAR(20),
-			femenine_value FLOAT(20), 
-			masculine_word VARCHAR(20),
-			masculine_value FLOAT(20),
-			tokio_word VARCHAR(20),
-			tokio_value FLOAT(20),
-			japan_word VARCHAR(20),
-			japan_value FLOAT(20)
-	)''')
-
 
 ## LOOPING:
 ## =======
 
-words = list(model.wv.vocab)[1:10]
-print(add_Japan(words[4])[0])
+Start = 13000
+Stop = 15000
 
-cursor.execute("INSERT INTO Analogies_1 VALUES ('hola', 'a', 13.31, 'b', 343, 'dwdas', 13.34224, 've', 3233)")
-conexion.commit()
+words = list(model.wv.vocab)[Start:Stop]
+
+for i in words:
+	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(i)[0][0], add_masculine(i)[0][1], add_Tokio(i)[0][0], add_Tokio(i)[0][1], add_Japan(i)[0][0], add_Japan(i)[0][1])
+	Resultado = [ resultado ]
+	cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Resultado)
+	conexion.commit()
 
 
 
