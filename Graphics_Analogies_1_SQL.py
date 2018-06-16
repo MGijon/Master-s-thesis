@@ -113,11 +113,11 @@ def graph_japan_1(rug = False):
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add japan for a total of ' + str(cantidad) + ' samples_Cumulative.png')
 	plt.show()
 
-graph_femenine_1()
-graph_masculine_1()
-graph_tokio_1()
-graph_japan_1()
-'''
+#graph_femenine_1()
+#graph_masculine_1()
+#graph_tokio_1()
+#graph_japan_1()
+
 def graph_femenine_masculine_1():
 	cursor.execute("SELECT femenine_value FROM Analogies_1")
 	datos1 = cursor.fetchall()
@@ -126,13 +126,32 @@ def graph_femenine_masculine_1():
 	datos2 = cursor.fetchall()
 	cantidad2 = len(datos2)
 	plt.figure(figsize = (20, 7))
-	plt.hist(datos1, bins = 50, histtype = 'stepfilled', normed = True, label = 'Women')
-	plt.hist(datos2, bins = 50, histtype = 'stepfilled', normed = True, label = 'Women')
+	plt.title('Adding masculine and femenine for a total of ' + str(cantidad1) + ' samples.')
+	sns.distplot(datos1, label = '+ women')
+	sns.distplot(datos2, label = '+ men')
 	plt.legend()
+	plt.xlabel('WOMEN -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nMEN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add femenine and masculine for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-graph_femenine_masculine_1()
-'''
+#graph_femenine_masculine_1()
+
+def graph_tokio_japan_1():
+	cursor.execute("SELECT tokio_value FROM Analogies_1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT japan_value FROM Analogies_1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Adding tokio and japan for a total of ' + str(cantidad1) + ' samples.')
+	sns.distplot(datos1, label = '+ women')
+	sns.distplot(datos2, label = '+ men')
+	plt.legend()
+	plt.xlabel('TOKIO -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nJAPAN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add femenine and masculine for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+
 # close the conexion with the data base
 conexion.close()
