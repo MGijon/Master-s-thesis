@@ -83,8 +83,8 @@ cursor = conexion.cursor()
 ## LOOPING:
 ## =======
 
-Start = 0
-Stop = 1000
+Start = 1000
+Stop = 2000
 
 words = list(model.wv.vocab)[Start:Stop]
 
