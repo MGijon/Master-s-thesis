@@ -224,6 +224,9 @@ def together():
 	cursor.execute("SELECT whom_value FROM Analogies_Questions")
 	datos7 = cursor.fetchall()
 
+	# FIGURE 1:
+	# --------
+
 	plt.figure(figsize = (20, 7))
 	plt.title('For a total of ' + str(cantidad) + ' samples.')
 	sns.distplot(datos1, label = '+ who - thing')
@@ -235,6 +238,36 @@ def together():
 	sns.distplot(datos7, label = '+ whom - thing')
 	plt.legend()
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Interrogative - thing for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	# FIGURE 2:
+	# --------
+
+	plt.figure(figsize = (20, 7))
+	plt.title('For a total of ' + str(cantidad) + ' samples.')
+	sns.distplot(datos1,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ who - thing')
+	sns.distplot(datos2,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ why - thing')
+	sns.distplot(datos3,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ where - thing')
+	sns.distplot(datos4,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ when - thing')
+	sns.distplot(datos5,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ what - thing')
+	sns.distplot(datos6,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ how - thing')
+	sns.distplot(datos7,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True), label = '+ whom - thing')
+	plt.legend()
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Cumulative: Interrogative - thing for a total of ' + str(cantidad) + ' samples.png')
 	plt.show()
 
 together()
