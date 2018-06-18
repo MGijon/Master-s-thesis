@@ -3,6 +3,7 @@ import gensim.models as gm
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from time import time
 
 '''
 word VARCHAR(20) PRIMARY KEY,
@@ -10,14 +11,10 @@ word VARCHAR(20) PRIMARY KEY,
 femenine_word VARCHAR(20),
 femenine_value FLOAT(20),
 
-masculine_word VARCHAR(20),
-masculine_value FLOAT(20),
+masculine_from_femenine_word VARCHAR(20),
+masculine_from_femenine_value FLOAT(20),
 
-tokio_word VARCHAR(20),
-tokio_value FLOAT(20),
-
-japan_word VARCHAR(20),
-japan_value FLOAT(20)
+distance_from_original_word float(20),
 '''
 
 ## FUNCTIONS:
@@ -37,18 +34,6 @@ def add_masculine(word, Tope = 1):
 	'''
 	return model.most_similar(positive = ['man', word], negative = ['woman'], topn = Tope)
 
-def add_Tokio(word, Tope = 1):
-	'''
-	'''
-	return model.most_similar(positive = ['Tokio', word], negative = ['Japan'], topn = Tope)
-
-def add_Japan(word, Tope = 1):
-	'''
-	'''
-	return model.most_similar(positive = ['Japan', word], negative = ['Tokio'], topn = Tope)
-
-
-
 ## SAVING:
 ## ======
 # create the data base
@@ -60,15 +45,15 @@ cursor = conexion.cursor()
 ## LOOPING:
 ## =======
 
-Start = 21592
-Stop = 25000
+Start = 0
+Stop = 2
 
 words = list(model.wv.vocab)[Start:Stop]
 
 for i in words:
-	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(i)[0][0], add_masculine(i)[0][1], add_Tokio(i)[0][0], add_Tokio(i)[0][1], add_Japan(i)[0][0], add_Japan(i)[0][1])
+	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(add_femenine(i)[0][0])[0][0], add_masculine(add_femenine(i)[0][0])[0][1], model.distance(add_femenine(i)[0][0], add_masculine(add_femenine(i)[0][0])[0][0]))
 	Resultado = [ resultado ]
-	cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Resultado)
+	cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?)", Resultado)
 	conexion.commit()
 
 
