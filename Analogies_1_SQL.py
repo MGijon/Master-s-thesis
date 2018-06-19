@@ -60,7 +60,7 @@ cursor = conexion.cursor()
 ## LOOPING:
 ## =======
 
-Start = 21592
+Start = 21607
 Stop = 25000
 
 words = list(model.wv.vocab)[Start:Stop]
@@ -68,9 +68,11 @@ words = list(model.wv.vocab)[Start:Stop]
 for i in words:
 	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(i)[0][0], add_masculine(i)[0][1], add_Tokio(i)[0][0], add_Tokio(i)[0][1], add_Japan(i)[0][0], add_Japan(i)[0][1])
 	Resultado = [ resultado ]
-	cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Resultado)
-	conexion.commit()
-
+	try:
+		cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Resultado)
+		conexion.commit()
+	except:
+		pass
 
 
 # close the conexion with the data base
