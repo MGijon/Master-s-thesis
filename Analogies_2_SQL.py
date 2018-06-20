@@ -1,4 +1,4 @@
-import sqlite3 
+import sqlite3
 import gensim.models as gm
 import pandas as pd
 import numpy as np
@@ -8,23 +8,23 @@ import matplotlib.pyplot as plt
 word VARCHAR(20) PRIMARY KEY,
 
 who_word VARCHAR(20),
-who_value FLOAT(20), 
+who_value FLOAT(20),
 
 why_word VARCHAR(20),
 why_value FLOAT(20),
-			
+
 where_word VARCHAR(20),
 where_value FLOAT(20),
-			
+
 when_word VARCHAR(20),
 when_value FLOAT(20),
-			
+
 what_word VARCHAR(20),
 what_value FLOAT(20),
-			
+
 how_word VARCHAR(20),
 how_value FLOAT(20),
-			
+
 whom_word VARCHAR(20),
 whom_value FLOAT(20)
 '''
@@ -83,8 +83,8 @@ cursor = conexion.cursor()
 ## LOOPING:
 ## =======
 
-Start = 1000
-Stop = 2000
+Start = 2000
+Stop = 3000
 
 words = list(model.wv.vocab)[Start:Stop]
 

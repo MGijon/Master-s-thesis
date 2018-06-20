@@ -53,7 +53,7 @@ words = list(model.wv.vocab)[Start:Stop]
 for i in words:
 	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(add_femenine(i)[0][0])[0][0], add_masculine(add_femenine(i)[0][0])[0][1], model.distance(add_femenine(i)[0][0], add_masculine(add_femenine(i)[0][0])[0][0]))
 	Resultado = [ resultado ]
-	cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?)", Resultado)
+	cursor.executemany("INSERT INTO Analogies_BF_WM VALUES (?, ?, ?, ?, ?, ?)", Resultado)
 	conexion.commit()
 
 

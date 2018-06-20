@@ -154,5 +154,42 @@ def graph_tokio_japan_1():
 
 graph_tokio_japan_1()
 
+def graph_femenine_masculine_2():
+	'''
+	Scatter plot
+	'''
+	cursor.execute("SELECT femenine_value FROM Analogies_1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT masculine_value FROM Analogies_1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Masculine and femenine scatter plot for a total of ' + str(cantidad1) + ' samples.')
+	plt.scatter(datos1, datos2)
+	plt.ylabel('+ men - women')
+	plt.xlabel('+ women - men\n\nWOMEN -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nMEN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Masculine and femenine scatter plot for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+graph_femenine_masculine_2()
+
+def graph_tokio_japan_2():
+	cursor.execute("SELECT tokio_value FROM Analogies_1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT japan_value FROM Analogies_1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Tokio and japan scatter plot for a total of ' + str(cantidad1) + ' samples.')
+	plt.scatter(datos1, datos2)
+	plt.ylabel('+ japan - tokio')
+	plt.xlabel('+ tokio - japan\n\nTOKIO -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nJAPAN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Tokio and japan scatter plot for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+graph_tokio_japan_2()
+
 # close the conexion with the data base
 conexion.close()

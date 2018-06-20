@@ -16,7 +16,7 @@ cursor.execute('''
 	CREATE TABLE Analogies_1 (
 			word VARCHAR(20) PRIMARY KEY,
 			femenine_word VARCHAR(20),
-			femenine_value FLOAT(20), 
+			femenine_value FLOAT(20),
 			masculine_word VARCHAR(20),
 			masculine_value FLOAT(20),
 			tokio_word VARCHAR(20),
