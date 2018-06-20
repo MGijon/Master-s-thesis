@@ -193,13 +193,13 @@ def graph_whom(rug = False):
 	plt.show()
 
 
-#graph_who()
-#graph_why()
-#graph_where()
-#graph_when()
-#graph_what()
-#graph_how()
-#graph_whom()
+graph_who()
+graph_why()
+graph_where()
+graph_when()
+graph_what()
+graph_how()
+graph_whom()
 
 def together():
 	cursor.execute("SELECT who_value FROM Analogies_Questions")
@@ -270,4 +270,4 @@ def together():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Cumulative: Interrogative - thing for a total of ' + str(cantidad) + ' samples.png')
 	plt.show()
 
-together()
+#together()
