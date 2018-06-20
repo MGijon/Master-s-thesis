@@ -113,10 +113,10 @@ def graph_japan_1(rug = False):
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add japan for a total of ' + str(cantidad) + ' samples_Cumulative.png')
 	plt.show()
 
-graph_femenine_1()
-graph_masculine_1()
-graph_tokio_1()
-graph_japan_1()
+#graph_femenine_1()
+#graph_masculine_1()
+#graph_tokio_1()
+#graph_japan_1()
 
 def graph_femenine_masculine_1():
 	cursor.execute("SELECT femenine_value FROM Analogies_1")
@@ -134,7 +134,7 @@ def graph_femenine_masculine_1():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add femenine and masculine for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-graph_femenine_masculine_1()
+#graph_femenine_masculine_1()
 
 def graph_tokio_japan_1():
 	cursor.execute("SELECT tokio_value FROM Analogies_1")
@@ -149,10 +149,10 @@ def graph_tokio_japan_1():
 	sns.distplot(datos2, label = '+ japan - tokio')
 	plt.legend()
 	plt.xlabel('TOKIO -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nJAPAN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
-	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add femenine and masculine for a total of ' + str(cantidad1) + ' samples.png')
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add Tokio and Japan for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-graph_tokio_japan_1()
+#graph_tokio_japan_1()
 
 def graph_femenine_masculine_2():
 	'''
@@ -172,7 +172,7 @@ def graph_femenine_masculine_2():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Masculine and femenine scatter plot for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-graph_femenine_masculine_2()
+#graph_femenine_masculine_2()
 
 def graph_tokio_japan_2():
 	cursor.execute("SELECT tokio_value FROM Analogies_1")
@@ -189,7 +189,151 @@ def graph_tokio_japan_2():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Tokio and japan scatter plot for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-graph_tokio_japan_2()
+#graph_tokio_japan_2()
+
+def media_masculine():
+	cursor.execute("SELECT masculine_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+
+	paso = 50
+	medias = []
+	std = []
+	for i in range(0, 10):
+		medias.append(np.mean(datos[0 : (i + 1)* paso]))
+	for i in range(0, 10):
+		std.append(np.std(datos[0 : (i + 1)* paso]))
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the mean and std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias and std men for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.title('Evolution of the mean for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias for men for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Std for men for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+media_masculine()
+
+def media_femenine():
+	cursor.execute("SELECT femenine_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+
+	paso = 50
+	medias = []
+	std = []
+	for i in range(0, 10):
+		medias.append(np.mean(datos[0 : (i + 1)* paso]))
+	for i in range(0, 10):
+		std.append(np.std(datos[0 : (i + 1)* paso]))
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the mean and std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias and std for femenine for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.title('Evolution of the mean for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias for femenine for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Std for femenine for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+media_femenine()
+
+def media_tokio():
+	cursor.execute("SELECT tokio_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+
+	paso = 50
+	medias = []
+	std = []
+	for i in range(0, 10):
+		medias.append(np.mean(datos[0 : (i + 1)* paso]))
+	for i in range(0, 10):
+		std.append(np.std(datos[0 : (i + 1)* paso]))
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the mean and std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias and std men for Tokio for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.title('Evolution of the mean for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias for men for Tokio for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Std for men for Tokio for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+media_tokio()
+
+def media_japan():
+	cursor.execute("SELECT japan_value FROM Analogies_1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+
+	paso = 50
+	medias = []
+	std = []
+	for i in range(0, 10):
+		medias.append(np.mean(datos[0 : (i + 1)* paso]))
+	for i in range(0, 10):
+		std.append(np.std(datos[0 : (i + 1)* paso]))
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the mean and std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias and std men for Japan for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(medias, color='red', label = 'mean')
+	plt.title('Evolution of the mean for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Medias for men for Japan for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.figure(figsize = (20, 7))
+	plt.plot(std, color='green', label = 'std')
+	plt.title('Evolution of the std for a total of ' + str(cantidad) + ' samples with a step of ' + str(paso))
+	plt.legend()
+	plt.savefig('Std for men for Japan for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+media_japan()
 
 # close the conexion with the data base
 conexion.close()
