@@ -60,13 +60,17 @@ cursor = conexion.cursor()
 ## LOOPING:
 ## =======
 
-Start = 25000
-Stop = 28000
+Start = 28000
+Stop = 30000
 
 words = list(model.wv.vocab)[Start:Stop]
 
 for i in words:
-	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(i)[0][0], add_masculine(i)[0][1], add_Tokio(i)[0][0], add_Tokio(i)[0][1], add_Japan(i)[0][0], add_Japan(i)[0][1])
+	femenine = add_femenine(i)[0]
+	masculine = add_masculine(i)[0]
+	tokio = add_Tokio(i)[0]
+	japan = add_Japan(i)[0]
+	resultado = (i, femenine[0], femenine[1], masculine[0], masculine[1], tokio[0], tokio[1], japan[0], japan[1])
 	Resultado = [ resultado ]
 	try:
 		cursor.executemany("INSERT INTO Analogies_1 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", Resultado)
