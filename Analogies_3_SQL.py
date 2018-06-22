@@ -45,13 +45,15 @@ cursor = conexion.cursor()
 ## LOOPING:
 ## =======
 
-Start = 0
-Stop = 2
+Start = 2
+Stop = 1000
 
 words = list(model.wv.vocab)[Start:Stop]
 
 for i in words:
-	resultado = (i, add_femenine(i)[0][0], add_femenine(i)[0][1], add_masculine(add_femenine(i)[0][0])[0][0], add_masculine(add_femenine(i)[0][0])[0][1], model.distance(add_femenine(i)[0][0], add_masculine(add_femenine(i)[0][0])[0][0]))
+	femenine = add_femenine(i)[0]
+	masculine_femenine = add_masculine(add_femenine(i)[0][0])[0]
+	resultado = (i, femenine[0], femenine[1], masculine_femenine[0], masculine_femenine[1], model.distance(femenine[0], masculine_femenine[0]))
 	Resultado = [ resultado ]
 	cursor.executemany("INSERT INTO Analogies_BF_WM VALUES (?, ?, ?, ?, ?, ?)", Resultado)
 	conexion.commit()

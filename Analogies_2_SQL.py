@@ -89,7 +89,14 @@ Stop = 3000
 words = list(model.wv.vocab)[Start:Stop]
 
 for i in words:
-	resultado = (i, add_who(i)[0][0], add_who(i)[0][1], add_why(i)[0][0], add_why(i)[0][1], add_where(i)[0][0], add_where(i)[0][1], add_when(i)[0][0], add_when(i)[0][1], add_what(i)[0][0], add_what(i)[0][1], add_how(i)[0][0], add_how(i)[0][1], add_whom(i)[0][0], add_whom(i)[0][1])
+	Who = add_who(i)[0]
+	Why = add_why(i)[0]
+	Where = add_where(i)[0]
+	When = add_when(i)[0]
+	What = add_what(i)[0]
+	How = add_how(i)[0]
+	Whom = add_whom(i)[0]
+	resultado = (i, Who[0], Who[1], Why[0], Why[1], Where[0], Where[1], When[0], When[1], What[0], What[1], How[0], How[1], Whom[0], Whom[1])
 	Resultado = [ resultado ]
 	cursor.executemany("INSERT INTO Analogies_Questions VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", Resultado)
 	conexion.commit()

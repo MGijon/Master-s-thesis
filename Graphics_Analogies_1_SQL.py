@@ -113,10 +113,10 @@ def graph_japan_1(rug = False):
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add japan for a total of ' + str(cantidad) + ' samples_Cumulative.png')
 	plt.show()
 
-#graph_femenine_1()
-#graph_masculine_1()
-#graph_tokio_1()
-#graph_japan_1()
+graph_femenine_1()
+graph_masculine_1()
+graph_tokio_1()
+graph_japan_1()
 
 def graph_femenine_masculine_1():
 	cursor.execute("SELECT femenine_value FROM Analogies_1")
@@ -134,7 +134,7 @@ def graph_femenine_masculine_1():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add femenine and masculine for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-#graph_femenine_masculine_1()
+graph_femenine_masculine_1()
 
 def graph_tokio_japan_1():
 	cursor.execute("SELECT tokio_value FROM Analogies_1")
@@ -152,7 +152,7 @@ def graph_tokio_japan_1():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Add Tokio and Japan for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-#graph_tokio_japan_1()
+graph_tokio_japan_1()
 
 def graph_femenine_masculine_2():
 	'''
@@ -172,7 +172,7 @@ def graph_femenine_masculine_2():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Masculine and femenine scatter plot for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-#graph_femenine_masculine_2()
+graph_femenine_masculine_2()
 
 def graph_tokio_japan_2():
 	cursor.execute("SELECT tokio_value FROM Analogies_1")
@@ -189,7 +189,7 @@ def graph_tokio_japan_2():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Tokio and japan scatter plot for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-#graph_tokio_japan_2()
+graph_tokio_japan_2()
 
 def media_masculine():
 	cursor.execute("SELECT masculine_value FROM Analogies_1")
