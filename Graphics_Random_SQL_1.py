@@ -87,17 +87,32 @@ def car_and_Kanemaru():
 	datos2 = cursor.fetchall()
 	cantidad2 = len(datos2)
 	plt.figure(figsize = (20, 7))
-	plt.title('Kanemau and car for a total of ' + str(cantidad1) + ' samples.')
+	plt.title('Kanemaru and car for a total of ' + str(cantidad1) + ' samples.')
 	sns.distplot(datos1, label = '+ Kanemaru - car')
 	sns.distplot(datos2, label = '+ car - Kanemaru')
 	plt.legend()
-	plt.xlabel('WOMEN -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nMEN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.xlabel('+ Kanemaru - car -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\n+ car - Kanemaru -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Kanemau and car for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-
 car_and_Kanemaru()
 
+def Scatter_car_and_Kanemaru():
+	cursor.execute("SELECT Kanemaru_car_value FROM R1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT car_Kanemaru_value FROM R1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Scatter Kanemaru and car for a total of ' + str(cantidad1) + ' samples.')
+	plt.scatter(datos1, datos2)
+	plt.ylabel('+ car - Kanemaru')
+	plt.xlabel('+ Kanemaru - car')
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Scatter Kanemau and car for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+Scatter_car_and_Kanemaru()
 
 
 # close the conexion with the data base
