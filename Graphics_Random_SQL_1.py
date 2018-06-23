@@ -53,4 +53,52 @@ def Kanemaru_car_value(rug = False):
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Kanemaru-car for a total of ' + str(cantidad) + ' samples_Cumulative.png')
 	plt.show()
 
-Kanemaru_car_value()
+#Kanemaru_car_value()
+
+def car_Kanemaru_value(rug = False):
+	cursor.execute("SELECT car_Kanemaru_value FROM R1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+	plt.figure(figsize = (20, 7))
+	plt.title('+ Car - Kanemaru for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(datos, rug = True)
+	else:
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/car-Kanemaru for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.title('Cumulative:+ Car - Kanemaru   for a total of ' + str(cantidad) + ' samples.')
+	sns.distplot(datos,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True))
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/car-Kanemaru for a total of ' + str(cantidad) + ' samples_Cumulative.png')
+	plt.show()
+
+#car_Kanemaru_value()
+
+def car_and_Kanemaru():
+	cursor.execute("SELECT Kanemaru_car_value FROM R1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT car_Kanemaru_value FROM R1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Kanemau and car for a total of ' + str(cantidad1) + ' samples.')
+	sns.distplot(datos1, label = '+ Kanemaru - car')
+	sns.distplot(datos2, label = '+ car - Kanemaru')
+	plt.legend()
+	plt.xlabel('WOMEN -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\nMEN -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Kanemau and car for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+
+car_and_Kanemaru()
+
+
+
+# close the conexion with the data base
+conexion.close()
