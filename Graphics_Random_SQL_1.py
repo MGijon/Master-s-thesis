@@ -195,7 +195,90 @@ def Scatter_car_and_RC():
 	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Scatter Rooftop_Comedy and car for a total of ' + str(cantidad1) + ' samples.png')
 	plt.show()
 
-Scatter_car_and_RC()
+#Scatter_car_and_RC()
+
+def Brahma_Vishnu_car_value(rug = False):
+	cursor.execute("SELECT Brahma_Vishnu_car_value FROM R1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+	plt.figure(figsize = (20, 7))
+	plt.title('+ Brahma_Vishnu - Car for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(datos, rug = True)
+	else:
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Brahma_Vishnu-car for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.title('Cumulative: + Brahma_Vishnu - Car for a total of ' + str(cantidad) + ' samples.')
+	sns.distplot(datos,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True))
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Brahma_Vishnu-car for a total of ' + str(cantidad) + ' samples_Cumulative.png')
+	plt.show()
+
+Brahma_Vishnu_car_value()
+
+def car_Brahma_Vishnu_value(rug = False):
+	cursor.execute("SELECT car_Brahma_Vishnu_value FROM R1")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+	plt.figure(figsize = (20, 7))
+	plt.title('+ car - Brahma_Vishnu for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(datos, rug = True)
+	else:
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Car-Brahma_Vishnu for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.title('Cumulative: + car - Brahma_Vishnu  for a total of ' + str(cantidad) + ' samples.')
+	sns.distplot(datos,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True))
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Car-Brahma_Vishnu for a total of ' + str(cantidad) + ' samples_Cumulative.png')
+	plt.show()
+
+car_Brahma_Vishnu_value()
+
+def car_BV():
+	cursor.execute("SELECT Brahma_Vishnu_car_value FROM R1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT car_Brahma_Vishnu_value FROM R1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Brahma_Vishnu and car for a total of ' + str(cantidad1) + ' samples.')
+	sns.distplot(datos1, label = '+ Brahma_Vishnu - car')
+	sns.distplot(datos2, label = '+ car - Brahma_Vishnu')
+	plt.legend()
+	plt.xlabel('+ Brahma_Vishnu - car -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\n+ car - Brahma_Vishnu -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Brahma_Vishnu and car for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+car_BV()
+
+def Scatter_car_and_BV():
+	cursor.execute("SELECT Brahma_Vishnu_car_value FROM R1")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT car_Brahma_Vishnu_value FROM R1")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Scatter Brahma_Vishnu and car for a total of ' + str(cantidad1) + ' samples.')
+	plt.scatter(datos1, datos2)
+	plt.ylabel('+ car - Brahma_Vishnu')
+	plt.xlabel('+ Brahma_Vishnu - car')
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Scatter Brahma_Vishnu and car for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+Scatter_car_and_BV()
 
 # close the conexion with the data base
 conexion.close()
