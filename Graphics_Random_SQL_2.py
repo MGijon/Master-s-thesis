@@ -203,6 +203,91 @@ def GRAPHIC_2(rug = False):
 
 #GRAPHIC_2()
 
+def GRAPHIC_3(rug = False):
+	'''
+	IMPOTENCE_VIAGRA_halloween_costume_VALUE
+	'''
+	cursor.execute("SELECT IMPOTENCE_VIAGRA_halloween_costume_VALUE FROM R2")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+	plt.figure(figsize = (20, 7))
+	plt.title('+ IMPOTENCE_VIAGRA - halloween_costume for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(datos, rug = True)
+	else:
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/IMPOTENCE_VIAGRA-halloween_costume for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.title('Cumulative: + IMPOTENCE_VIAGRA - halloween_costume for a total of ' + str(cantidad) + ' samples.')
+	sns.distplot(datos,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True))
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/IMPOTENCE_VIAGRA-halloween_costume for a total of ' + str(cantidad) + ' samples_Cumulative.png')
+	plt.show()
+
+	'''
+	halloween_costume_IMPOTENCE_VIAGRA_VALUE
+	'''
+	cursor.execute("SELECT halloween_costume_IMPOTENCE_VIAGRA_VALUE FROM R2")
+	datos = cursor.fetchall()
+	cantidad = len(datos)
+	plt.figure(figsize = (20, 7))
+	plt.title('+ halloween_costume - IMPOTENCE_VIAGRA for a total of ' + str(cantidad) + ' samples.')
+	if rug:
+		sns.distplot(datos, rug = True)
+	else:
+		sns.distplot(datos)
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/halloween_costume-IMPOTENCE_VIAGRA for a total of ' + str(cantidad) + ' samples.png')
+	plt.show()
+
+	plt.title('Cumulative: + halloween_costume - IMPOTENCE_VIAGRA for a total of ' + str(cantidad) + ' samples.')
+	sns.distplot(datos,
+             hist_kws=dict(cumulative=True),
+             kde_kws=dict(cumulative=True))
+	plt.xlabel('Mean : ' + str(np.mean(datos)) + ' - STD : ' + str(np.std(datos)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/halloween_costume-IMPOTENCE_VIAGRA for a total of ' + str(cantidad) + ' samples_Cumulative.png')
+	plt.show()
+
+	'''
+	IMPOTENCE_VIAGRA_halloween_costume_VALUE & halloween_costume_IMPOTENCE_VIAGRA_VALUE
+	'''
+	cursor.execute("SELECT IMPOTENCE_VIAGRA_halloween_costume_VALUE FROM R2")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT halloween_costume_IMPOTENCE_VIAGRA_VALUE FROM R2")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('IMPOTENCE_VIAGRA and halloween_costume for a total of ' + str(cantidad1) + ' samples.')
+	sns.distplot(datos1, label = '+ IMPOTENCE_VIAGRA - halloween_costume')
+	sns.distplot(datos2, label = '+ halloween_costume - IMPOTENCE_VIAGRA')
+	plt.legend()
+	plt.xlabel('+ IMPOTENCE_VIAGRA - halloween_costume -> Mean : ' + str(np.mean(datos1)) + ' - STD : ' + str(np.std(datos1)) + '\n+ halloween_costume - IMPOTENCE_VIAGRA -> Mean : ' + str(np.mean(datos2)) + ' - STD : ' + str(np.std(datos2)))
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/IMPOTENCE_VIAGRA and halloween_costume for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+	'''
+	Scatter IMPOTENCE_VIAGRA_halloween_costume_VALUE & halloween_costume_IMPOTENCE_VIAGRA_VALUE
+	'''
+	cursor.execute("SELECT IMPOTENCE_VIAGRA_halloween_costume_VALUE FROM R2")
+	datos1 = cursor.fetchall()
+	cantidad1 = len(datos1)
+	cursor.execute("SELECT halloween_costume_IMPOTENCE_VIAGRA_VALUE FROM R2")
+	datos2 = cursor.fetchall()
+	cantidad2 = len(datos2)
+	plt.figure(figsize = (20, 7))
+	plt.title('Scatter IMPOTENCE_VIAGRA and halloween_costume for a total of ' + str(cantidad1) + ' samples.')
+	plt.scatter(datos1, datos2)
+	plt.ylabel('+ IMPOTENCE_VIAGRA - halloween_costume')
+	plt.xlabel('+ halloween_costume - IMPOTENCE_VIAGRA')
+	plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Scatter IMPOTENCE_VIAGRA and halloween_costume for a total of ' + str(cantidad1) + ' samples.png')
+	plt.show()
+
+GRAPHIC_3()
 
 # close the conexion with the data base
 conexion.close()
