@@ -52,7 +52,8 @@ dict = {'Palabras': palabras, '+Women': femenine_palabras, '+Women (valores)': f
         '+Men': masculine_palabras, '+Men (valores)': masculine,
         '+Tokio': tokio_palabras, '+Tokio (valores)': tokio,
         '+Japan': japan_palabras, '+Japan (valores)': japan}
-        
+
 df = pd.DataFrame(dict)
 
-print(df.describe())
+# create a copy of the data in order to use it easily in R
+df.to_csv('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/CSV/Analogies_1.csv')
