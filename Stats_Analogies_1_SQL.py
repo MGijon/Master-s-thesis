@@ -24,6 +24,8 @@ japan_value FLOAT(20)
 
 route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite/Analogies.db'
 conexion = sqlite3.connect(route2)
+# create the cursor pointing to the data base
+cursor = conexion.cursor()
 
 cursor.execute("SELECT word FROM Analogies_1")
 palabras = cursor.fetchall()
@@ -46,6 +48,11 @@ japan = cursor.fetchall()
 # close the conexion with the data base
 conexion.close()
 
-df = pd.DataFrame(palabras, femenine_palabras, femenine, masculine_palabras, masculine, tokio_palabras, tokio, japan_palabras, japan)
+dict = {'Palabras': palabras, '+Women': femenine_palabras, '+Women (valores)': femenine,
+        '+Men': masculine_palabras, '+Men (valores)': masculine,
+        '+Tokio': tokio_palabras, '+Tokio (valores)': tokio,
+        '+Japan': japan_palabras, '+Japan (valores)': japan}
+        
+df = pd.DataFrame(dict)
 
 print(df.describe())
