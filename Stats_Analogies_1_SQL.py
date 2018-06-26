@@ -48,10 +48,16 @@ japan = cursor.fetchall()
 # close the conexion with the data base
 conexion.close()
 
-dict = {'Palabras': palabras, '+Women': femenine_palabras, '+Women (valores)': femenine,
-        '+Men': masculine_palabras, '+Men (valores)': masculine,
-        '+Tokio': tokio_palabras, '+Tokio (valores)': tokio,
-        '+Japan': japan_palabras, '+Japan (valores)': japan}
+def sacar_tupla(lista):
+    temporal = []
+    for i in lista:
+        temporal.append(i[0])
+    return temporal
+
+dict = {'Palabras': sacar_tupla(palabras), '+Women': sacar_tupla(femenine_palabras), '+Women (valores)': sacar_tupla(femenine),
+        '+Men': sacar_tupla(masculine_palabras), '+Men (valores)': sacar_tupla(masculine),
+        '+Tokio': sacar_tupla(tokio_palabras), '+Tokio (valores)': sacar_tupla(tokio),
+        '+Japan': sacar_tupla(japan_palabras), '+Japan (valores)': sacar_tupla(japan)}
 
 df = pd.DataFrame(dict)
 
