@@ -7,7 +7,7 @@ import random
 import sqlite3
 
 # Cantidad de datos que sumamos a la base de datos
-TOPE = 1
+TOPE = 100
 
 # load the model
 route = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Models/GoogleNews-vectors-negative300.bin'
@@ -32,13 +32,18 @@ indexes = cursor.fetchall()
 for i in range(0, TOPE):
     aleatorio = random.randint(0, len(vocabulario))
     if aleatorio not in indexes:
-        # lo clcularemos y ñadiremos, debemos constultar primero al base de datos
-        auxiliar = model.distance(vocabulario[aleatorio], vocabulario[aleatorio + 1])
-        auxiliar2 = model.most_similar(vocabulario[aleatorio], topn = 1)
+        auxiliar = model.most_similar(vocabulario[aleatorio], topn = 1)
         print(vocabulario[aleatorio])
         print("==========")
-        print(auxiliar2)
-
+        print(auxiliar[0][0])
+        print(auxiliar[0][1])
+        resultado = (i, auxiliar[0][0], auxiliar[0][1])
+        Resultado = [resultado]
+        try:
+            cursor.executemany("INSERT INTO Embedding_300 VALUES (?, ?, ?)", Resultado)
+            conexion.commit()
+        except:
+            pass
 
 
 # close the conexion with the data base
