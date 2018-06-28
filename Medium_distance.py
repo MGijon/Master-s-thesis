@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pickle
 import random
+import sqlite3
 
 # Cantidad de datos que sumamos a la base de datos
 TOPE = 1
@@ -22,16 +23,21 @@ nearest_word_distance FLOAT(20)
 # Open the data base
 route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite/Distances.db'
 conexion = sqlite3.connect(route2)
+# create the cursor pointing to the data base
+cursor = conexion.cursor()
 
-cursor.execute("SELECT indices FROM Embedding_300")
+cursor.execute("SELECT indice FROM Embedding_300")
 indexes = cursor.fetchall()
 
-for i in range(0, Tope):
+for i in range(0, TOPE):
     aleatorio = random.randint(0, len(vocabulario))
     if aleatorio not in indexes:
         # lo clcularemos y ñadiremos, debemos constultar primero al base de datos
-        auxiliar = model.distance(vocabulario[aleatorio], model.most_similar(vocabulario[aleatorio]))
-        print(auxiliar)
+        auxiliar = model.distance(vocabulario[aleatorio], vocabulario[aleatorio + 1])
+        auxiliar2 = model.most_similar(vocabulario[aleatorio], topn = 1)
+        print(vocabulario[aleatorio])
+        print("==========")
+        print(auxiliar2)
 
 
 
