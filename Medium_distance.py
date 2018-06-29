@@ -7,19 +7,20 @@ import random
 import sqlite3
 
 # Cantidad de datos que sumamos a la base de datos
-TOPE = 100
+TOPE = 10000
 
 # load the model
 route = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Models/GoogleNews-vectors-negative300.bin'
 model = gm.KeyedVectors.load_word2vec_format(route, binary = True)
 
-vocabulario = words = list(model.wv.vocab)
+vocabulario = list(model.wv.vocab)
 
 '''
 indice INT PRIMARY KEY,
 word VARCHAR(20),
 nearest_word_distance FLOAT(20)
 '''
+
 # Open the data base
 route2 = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/SQLite/Distances.db'
 conexion = sqlite3.connect(route2)
@@ -37,7 +38,7 @@ for i in range(0, TOPE):
         print("==========")
         print(auxiliar[0][0])
         print(auxiliar[0][1])
-        resultado = (i, auxiliar[0][0], auxiliar[0][1])
+        resultado = (aleatorio, auxiliar[0][0], auxiliar[0][1])
         Resultado = [resultado]
         try:
             cursor.executemany("INSERT INTO Embedding_300 VALUES (?, ?, ?)", Resultado)
