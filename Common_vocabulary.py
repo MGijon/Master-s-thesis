@@ -18,10 +18,13 @@ print(lista_vocabulario_1[10])
 # ----------------
 
 def limpieza(lista):
+    aux = []
     for word in lista:
         word = word.replace('/en/', '')
         word = word.replace('/m/', '')
-    return lista
+        word = word.strip()
+        aux.append(word)
+    return aux
 
 
 route = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Models/freebase-vectors-skipgram1000-en.bin'
