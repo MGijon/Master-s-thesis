@@ -19,8 +19,8 @@ print(lista_vocabulario_1[10])
 
 def limpieza(lista):
     for word in lista:
-        word = word.replace('/en/')
-        word = word.replace('/m/')
+        word = word.replace('/en/', '')
+        word = word.replace('/m/', '')
     return lista
 
 
