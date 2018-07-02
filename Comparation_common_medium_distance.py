@@ -42,6 +42,22 @@ plt.xlabel('NS: mean = ' + str(np.mean(distances_1)) + ' std = ' + str(np.std(di
 plt.savefig('Comparation distances for the nearest word for ' + str(cantidad) + ' words.png')
 plt.show()
 
+# Figura 2
+# ========
+
+plt.figure(figsize = (20, 7))
+sns.distplot(distances_1,
+         hist_kws=dict(cumulative=True),
+         kde_kws=dict(cumulative=True), label = 'Negative Sampling 300')
+sns.distplot(distances_2,
+         hist_kws=dict(cumulative=True),
+         kde_kws=dict(cumulative=True), label = 'Skip Gram 1000')
+plt.title('Comparation distances for the nearest word for ' + str(cantidad) + ' words')
+plt.legend()
+plt.xlabel('NS: mean = ' + str(np.mean(distances_1)) + ' std = ' + str(np.std(distances_1)) + ' \nSG: mean = ' + str(np.mean(distances_2)) + ' std = ' + str(np.std(distances_2)))
+plt.savefig('Cumulative .- Comparation distances for the nearest word for ' + str(cantidad) + ' words.png')
+plt.show()
+
 
 # close the conexion with the data base
 conexion.close()
