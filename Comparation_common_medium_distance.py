@@ -39,7 +39,7 @@ sns.distplot(distances_2, label = 'Skip Gram 1000', rug = True)
 plt.title('Comparation distances for the nearest word for ' + str(cantidad) + ' words')
 plt.legend()
 plt.xlabel('NS: mean = ' + str(np.mean(distances_1)) + ' std = ' + str(np.std(distances_1)) + ' \nSG: mean = ' + str(np.mean(distances_2)) + ' std = ' + str(np.std(distances_2)))
-plt.savefig('Comparation distances for the nearest word for ' + str(cantidad) + ' words.png')
+plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Comparation distances for the nearest word for ' + str(cantidad) + ' words.png')
 plt.show()
 
 # Figura 2
@@ -55,7 +55,7 @@ sns.distplot(distances_2,
 plt.title('Comparation distances for the nearest word for ' + str(cantidad) + ' words')
 plt.legend()
 plt.xlabel('NS: mean = ' + str(np.mean(distances_1)) + ' std = ' + str(np.std(distances_1)) + ' \nSG: mean = ' + str(np.mean(distances_2)) + ' std = ' + str(np.std(distances_2)))
-plt.savefig('Cumulative .- Comparation distances for the nearest word for ' + str(cantidad) + ' words.png')
+plt.savefig('/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Images/Cumulative .- Comparation distances for the nearest word for ' + str(cantidad) + ' words.png')
 plt.show()
 
 
