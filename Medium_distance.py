@@ -7,7 +7,7 @@ import random
 import sqlite3
 
 # Cantidad de datos que sumamos a la base de datos
-TOPE = 10000
+TOPE = 30000
 
 # load the model
 route = '/Users/manuelgijon/Documents/Programación/Masters_thesis/Data/Models/GoogleNews-vectors-negative300.bin'
