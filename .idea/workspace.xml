@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3dfa17bd-ac3c-46a3-ad6a-5ef85ab81713" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Analogies_1.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_1_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_1_SQL_create_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_2_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_2_SQL_create_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_3_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_3_SQL_create_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Analogies_Questions.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common_medium_distances.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common_vocabulary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Comparation_common_medium_distance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Create_common_medium_distance_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/CSV/Analogies_1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/CSV/Analogies_Questions.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add Tokio and Japan for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add Tokio and Japan for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine and masculine for a total of 20000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine and masculine for a total of 21607 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine and masculine for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine and masculine for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine and masculine for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine and masculine for a total of 7000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 20000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 24999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 27999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 29999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 7000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add femenine for a total of 7000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 20000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 24999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 27999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 29999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 7000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add japan for a total of 7000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 20000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 24999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 27999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 29999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 7000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add masculine for a total of 7000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio and japan for a total of 20000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio and japan for a total of 7000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 20000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 24999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 27999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 29999 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 7000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Add tokio for a total of 7000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Analogies_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Brahma_Vishnu and car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Brahma_Vishnu-car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Brahma_Vishnu-car for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Car-Brahma_Vishnu for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Car-Brahma_Vishnu for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Car-Rooftop_Comedy for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Car-Rooftop_Comedy for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Comparation distances for the nearest word for 530 words.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Cumulative .- Comparation distances for the nearest word for 530 words.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Cumulative: Interrogative - thing for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Cumulative: Interrogative - thing for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Distance to the nearest word for 51546 random samples._Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Distance to the nearest word for 51546 random samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Distance to the nearest word for 61350 random samples._Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Distance to the nearest word for 61350 random samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Distance to the nearest word for 71097 random samples._Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Distance to the nearest word for 71097 random samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/How for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/How for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/How for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/How for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/How for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/How for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/IMPOTENCE_VIAGRA and halloween_costume for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/IMPOTENCE_VIAGRA-halloween_costume for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/IMPOTENCE_VIAGRA-halloween_costume for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Interrogative - thing for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Interrogative - thing for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Kanemaru-car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Kanemaru-car for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Kanemau and car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Masculine and femenine scatter plot for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Masculine and femenine scatter plot for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Masculine and femenine scatter plot for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std for femenine for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std for femenine for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std men for Japan for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std men for Japan for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std men for Tokio for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std men for Tokio for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std men for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias and std men for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for femenine for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for femenine for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for men for Japan for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for men for Japan for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for men for Tokio for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for men for Tokio for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for men for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Medias for men for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Naked_Juice and molecule_sequencing for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Naked_Juice-molecule_sequencing for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Naked_Juice-molecule_sequencing for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Questions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Rooftop_Comedy and car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Rooftop_Comedy-car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Rooftop_Comedy-car for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Scatter Brahma_Vishnu and car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Scatter IMPOTENCE_VIAGRA and halloween_costume for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Scatter Kanemau and car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Scatter Naked_Juice and molecule_sequencing for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Scatter Rooftop_Comedy and car for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Scatter nab_sexual_predators and abductor_muscle for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for femenine for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for femenine for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for men for Japan for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for men for Japan for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for men for Tokio for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for men for Tokio for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for men for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Std for men for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Tokio and japan scatter plot for a total of 24999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Tokio and japan scatter plot for a total of 27999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Tokio and japan scatter plot for a total of 29999 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/What for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/What for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/What for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/What for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/What for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/What for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/When for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/When for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/When for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/When for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/When for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/When for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Where for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Where for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Where for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Where for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Where for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Where for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Who for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Who for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Who for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Who for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Who for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Who for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Whom for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Whom for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Whom for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Whom for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Whom for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Whom for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Why for a total of 1000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Why for a total of 1000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Why for a total of 2000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Why for a total of 2000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Why for a total of 3000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/Why for a total of 3000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/abductor_muscle-nab_sexual_predators for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/abductor_muscle-nab_sexual_predators for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/car-Kanemaru for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/car-Kanemaru for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/halloween_costume-IMPOTENCE_VIAGRA for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/halloween_costume-IMPOTENCE_VIAGRA for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/molecule_sequencing-Naked_Juice for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/molecule_sequencing-Naked_Juice for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/nab_sexual_predators and abductor_muscle for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/nab_sexual_predators-abductor_muscle  for a total of 30000 samples_Cumulative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Images/nab_sexual_predators-abductor_muscle for a total of 30000 samples.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics_Analogies_1_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics_Analogies_2_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics_Medium_distance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics_Random_SQL_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics_Random_SQL_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Graphics_Random_SQL_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Measure_distances_database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medium_distance.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SphereVolumeExploration.py" beforeDir="false" afterPath="$PROJECT_DIR$/SphereVolumeExploration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stats_Analogies_1_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stats_Analogies_2_SQL.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SynonimsGloVeComparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/SynonimsGloVeComparation.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SynonimsGloVeComparation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SynonimsGloVeComparation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="613">
+              <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SphereVolumeExploration.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SphereVolumeExploration.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/SynonimsGloVeComparation.py" />
+        <option value="$PROJECT_DIR$/SphereVolumeExploration.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Masters_thesis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Masters_thesis" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3dfa17bd-ac3c-46a3-ad6a-5ef85ab81713" name="Default" comment="" />
+      <created>1561033336819</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561033336819</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SynonimsGloVeComparation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="118" selection-start-line="118" selection-end-line="118" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SynonimsGloVeComparation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SphereVolumeExploration.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
