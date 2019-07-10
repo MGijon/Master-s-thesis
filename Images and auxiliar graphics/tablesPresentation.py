@@ -54,10 +54,11 @@ W300SynonymsAntonyms = [('Euclidean', ),
 ## Graphics ##
 ## ======== ##
 
+# GloVe 300
+# ---------
+
 fig, ax = plt.subplots(1, 2)
 plt.gcf().subplots_adjust(bottom=0.30)
-
-plt.ylim(bottom=0, top=1)
 
 norms = [x[0] for x in G300Synonyms]
 G300SynonymsAll = [x[1] for x in G300Synonyms]
@@ -66,8 +67,27 @@ G300SynonymsWN = [x[2] for x in G300Synonyms]
 G300SAll = pd.Series(G300SynonymsAll, index = norms)
 G300SWN = pd.Series(G300SynonymsWN, index = norms)
 
-G300SAll.plot("bar", ax=ax[0], alpha=.45).set_title("All vocabulary")
-G300SWN.plot("bar", ax=ax[1], alpha=.45).set_title("WordNet vocabulary")
+G300SAll.plot("bar", ax=ax[0], alpha=.45, ylim=[0, 0.65]).set_title("All vocabulary")
+G300SWN.plot("bar", ax=ax[1], alpha=.45, ylim=[0, 0.65]).set_title("WordNet vocabulary")
 
 plt.savefig("GloVe300Synonyms")
+plt.show()
+
+# Word2Vec 300
+# ------------
+
+fig, ax = plt.subplots(1, 2)
+plt.gcf().subplots_adjust(bottom=0.30)
+
+norms = [x[0] for x in W300Synonyms]
+W300SynonymsAll = [x[1] for x in W300Synonyms]
+W300SynonymsWN = [x[2] for x in W300Synonyms]
+
+W300SAll = pd.Series(W300SynonymsAll, index = norms)
+W300SWN = pd.Series(W300SynonymsWN, index = norms)
+
+W300SAll.plot("bar", ax=ax[0], alpha=.45, ylim=[0, 1]).set_title("All vocabulary")
+W300SWN.plot("bar", ax=ax[1], alpha=.45, ylim=[0, 1]).set_title("WordNet vocabulary")
+
+plt.savefig("Word2Vec300Synonyms")
 plt.show()
