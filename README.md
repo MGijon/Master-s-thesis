@@ -12,7 +12,7 @@ This folder contains:
 
 ## Citation
 ~~~
-@inproceedings{MGijon2019,
+@MASTERSTHESIS{MGijon2019,
 title={{An analysis of word embedding spaces and regularities}},
 author={Manuel Gijón Agudo},
 year={2019},
